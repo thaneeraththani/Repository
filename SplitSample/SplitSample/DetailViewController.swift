@@ -6,8 +6,13 @@
 //  Copyright © 2016 citrusinformatics. All rights reserved.
 //
 
-import Cocoa
+import UIKit
+
 
 class DetailViewController: UIViewController {
+    @IBOutlet weak var sample: UILabel!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 
 }

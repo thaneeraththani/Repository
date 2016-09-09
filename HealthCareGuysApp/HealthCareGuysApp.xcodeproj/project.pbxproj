@@ -9,12 +9,21 @@
 /* Begin PBXBuildFile section */
 		8ACA82FC1D8263B400151A77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA82FB1D8263B400151A77 /* AppDelegate.swift */; };
 		8ACA82FE1D8263B400151A77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA82FD1D8263B400151A77 /* ViewController.swift */; };
-		8ACA83011D8263B400151A77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ACA82FF1D8263B400151A77 /* Main.storyboard */; };
 		8ACA83041D8263B400151A77 /* HealthCareGuysApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA83021D8263B400151A77 /* HealthCareGuysApp.xcdatamodeld */; };
-		8ACA83061D8263B400151A77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ACA83051D8263B400151A77 /* Assets.xcassets */; };
 		8ACA83091D8263B400151A77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ACA83071D8263B400151A77 /* LaunchScreen.storyboard */; };
 		8ACA83141D8263B400151A77 /* HealthCareGuysAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA83131D8263B400151A77 /* HealthCareGuysAppTests.swift */; };
 		8ACA831F1D8263B400151A77 /* HealthCareGuysAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA831E1D8263B400151A77 /* HealthCareGuysAppUITests.swift */; };
+		8ACA832D1D8263E100151A77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ACA832C1D8263E100151A77 /* Main.storyboard */; };
+		8ACA832F1D8263F400151A77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ACA832E1D8263F400151A77 /* Assets.xcassets */; };
+		8ACA83311D82640000151A77 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA83301D82640000151A77 /* MenuViewController.swift */; };
+		8ACA83331D82640900151A77 /* MainCellItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA83321D82640900151A77 /* MainCellItems.swift */; };
+		8ACA83371D82641B00151A77 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA83351D82641B00151A77 /* SWRevealViewController.m */; };
+		8ACA833A1D82642D00151A77 /* ReloadExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA83391D82642D00151A77 /* ReloadExampleViewController.swift */; };
+		8ACA833C1D82643500151A77 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA833B1D82643500151A77 /* CustomCell.swift */; };
+		8ACA833E1D82643D00151A77 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA833D1D82643D00151A77 /* MenuCell.swift */; };
+		8ACA83401D82644700151A77 /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA833F1D82644700151A77 /* RightViewController.swift */; };
+		8ACA83421D8273C000151A77 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA83411D8273C000151A77 /* DetailViewController.swift */; };
+		8ACA83441D82C6EB00151A77 /* LoaderClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA83431D82C6EB00151A77 /* LoaderClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +47,7 @@
 		8ACA82F81D8263B400151A77 /* HealthCareGuysApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthCareGuysApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ACA82FB1D8263B400151A77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8ACA82FD1D8263B400151A77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8ACA83001D8263B400151A77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8ACA83031D8263B400151A77 /* HealthCareGuysApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HealthCareGuysApp.xcdatamodel; sourceTree = "<group>"; };
-		8ACA83051D8263B400151A77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8ACA83081D8263B400151A77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8ACA830A1D8263B400151A77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8ACA830F1D8263B400151A77 /* HealthCareGuysAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthCareGuysAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +56,19 @@
 		8ACA831A1D8263B400151A77 /* HealthCareGuysAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthCareGuysAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ACA831E1D8263B400151A77 /* HealthCareGuysAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCareGuysAppUITests.swift; sourceTree = "<group>"; };
 		8ACA83201D8263B400151A77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8ACA832C1D8263E100151A77 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8ACA832E1D8263F400151A77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8ACA83301D82640000151A77 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		8ACA83321D82640900151A77 /* MainCellItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCellItems.swift; sourceTree = "<group>"; };
+		8ACA83341D82641B00151A77 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		8ACA83351D82641B00151A77 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		8ACA83381D82642700151A77 /* MenuSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MenuSample-Bridging-Header.h"; sourceTree = "<group>"; };
+		8ACA83391D82642D00151A77 /* ReloadExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReloadExampleViewController.swift; sourceTree = "<group>"; };
+		8ACA833B1D82643500151A77 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		8ACA833D1D82643D00151A77 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		8ACA833F1D82644700151A77 /* RightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
+		8ACA83411D8273C000151A77 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8ACA83431D82C6EB00151A77 /* LoaderClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +119,23 @@
 		8ACA82FA1D8263B400151A77 /* HealthCareGuysApp */ = {
 			isa = PBXGroup;
 			children = (
+				8ACA833F1D82644700151A77 /* RightViewController.swift */,
+				8ACA833D1D82643D00151A77 /* MenuCell.swift */,
+				8ACA833B1D82643500151A77 /* CustomCell.swift */,
+				8ACA83391D82642D00151A77 /* ReloadExampleViewController.swift */,
+				8ACA83381D82642700151A77 /* MenuSample-Bridging-Header.h */,
+				8ACA83361D82641B00151A77 /* SWRevealViewController */,
+				8ACA83321D82640900151A77 /* MainCellItems.swift */,
+				8ACA83301D82640000151A77 /* MenuViewController.swift */,
+				8ACA832E1D8263F400151A77 /* Assets.xcassets */,
+				8ACA832C1D8263E100151A77 /* Main.storyboard */,
 				8ACA82FB1D8263B400151A77 /* AppDelegate.swift */,
 				8ACA82FD1D8263B400151A77 /* ViewController.swift */,
-				8ACA82FF1D8263B400151A77 /* Main.storyboard */,
-				8ACA83051D8263B400151A77 /* Assets.xcassets */,
 				8ACA83071D8263B400151A77 /* LaunchScreen.storyboard */,
 				8ACA830A1D8263B400151A77 /* Info.plist */,
 				8ACA83021D8263B400151A77 /* HealthCareGuysApp.xcdatamodeld */,
+				8ACA83411D8273C000151A77 /* DetailViewController.swift */,
+				8ACA83431D82C6EB00151A77 /* LoaderClass.swift */,
 			);
 			path = HealthCareGuysApp;
 			sourceTree = "<group>";
@@ -126,6 +156,16 @@
 				8ACA83201D8263B400151A77 /* Info.plist */,
 			);
 			path = HealthCareGuysAppUITests;
+			sourceTree = "<group>";
+		};
+		8ACA83361D82641B00151A77 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8ACA83341D82641B00151A77 /* SWRevealViewController.h */,
+				8ACA83351D82641B00151A77 /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
+			path = ../../HealthCareGuys/MenuSample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +272,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ACA832D1D8263E100151A77 /* Main.storyboard in Resources */,
+				8ACA832F1D8263F400151A77 /* Assets.xcassets in Resources */,
 				8ACA83091D8263B400151A77 /* LaunchScreen.storyboard in Resources */,
-				8ACA83061D8263B400151A77 /* Assets.xcassets in Resources */,
-				8ACA83011D8263B400151A77 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +299,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ACA83421D8273C000151A77 /* DetailViewController.swift in Sources */,
 				8ACA82FE1D8263B400151A77 /* ViewController.swift in Sources */,
 				8ACA83041D8263B400151A77 /* HealthCareGuysApp.xcdatamodeld in Sources */,
+				8ACA833E1D82643D00151A77 /* MenuCell.swift in Sources */,
+				8ACA833A1D82642D00151A77 /* ReloadExampleViewController.swift in Sources */,
+				8ACA83441D82C6EB00151A77 /* LoaderClass.swift in Sources */,
+				8ACA83331D82640900151A77 /* MainCellItems.swift in Sources */,
 				8ACA82FC1D8263B400151A77 /* AppDelegate.swift in Sources */,
+				8ACA83311D82640000151A77 /* MenuViewController.swift in Sources */,
+				8ACA83401D82644700151A77 /* RightViewController.swift in Sources */,
+				8ACA833C1D82643500151A77 /* CustomCell.swift in Sources */,
+				8ACA83371D82641B00151A77 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +346,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8ACA82FF1D8263B400151A77 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8ACA83001D8263B400151A77 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8ACA83071D8263B400151A77 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -409,6 +450,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.citrusInformatics.HealthCareGuysApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HealthCareGuysApp/MenuSample-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -420,6 +462,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.citrusInformatics.HealthCareGuysApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HealthCareGuysApp/MenuSample-Bridging-Header.h";
 			};
 			name = Release;
 		};
