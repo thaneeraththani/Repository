@@ -23,7 +23,7 @@ class MenuViewController: UITableViewController{
         return data.count
     }
    
-    override func viewWillAppear(animated: Bool) {
+/*    override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         self.revealViewController().frontViewController.view.userInteractionEnabled = false
      self.revealViewController().view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
@@ -32,7 +32,7 @@ class MenuViewController: UITableViewController{
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(true)
        self.revealViewController().frontViewController.view.userInteractionEnabled = true
-    }
+    }*/
     
 
 }

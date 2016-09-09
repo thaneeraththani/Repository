@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9EE8C2F4BDC3F305D9AD93527AFB210557FCECC8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C3337D7EE2CFD5B474CAC1658B344A43F6A1233E" : 0,
+    "9EE8C2F4BDC3F305D9AD93527AFB210557FCECC8" : 0,
+    "C5E32BCC9EB3E7AC2AB181AF3CE79E9A9ECE5A65" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2178F814-B16D-4D27-8C61-6A3EC63A8174",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C3337D7EE2CFD5B474CAC1658B344A43F6A1233E" : "Repository\/HealthCareGuys\/",
+    "9EE8C2F4BDC3F305D9AD93527AFB210557FCECC8" : "Repository\/",
+    "C5E32BCC9EB3E7AC2AB181AF3CE79E9A9ECE5A65" : "Repository\/HealthCareGuysApp\/HealthCareGuysApp\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HealthCareGuysApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "HealthCareGuysApp\/HealthCareGuysApp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:thaneeraththani\/Repository.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9EE8C2F4BDC3F305D9AD93527AFB210557FCECC8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/git.netspective.io\/netspective-mobile-app\/healthcareguys-news-ios-app.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C3337D7EE2CFD5B474CAC1658B344A43F6A1233E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "gitlab.rcs.cm.netspective.io:netspective-mobile-app\/healthcareguys-news-ios-app.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C5E32BCC9EB3E7AC2AB181AF3CE79E9A9ECE5A65"
+    }
+  ]
+}
