@@ -6,8 +6,19 @@
 //  Copyright © 2016 citrusinformatics. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
 class PhotoViewController: UIViewController {
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet weak var rightButton: UIBarButtonItem!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        menuButton.target = self.revealViewController()
+        menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        rightButton.target = self.revealViewController()
+        rightButton.action =  #selector(SWRevealViewController.rightRevealToggle(_:))
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
 
 }
