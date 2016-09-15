@@ -23,7 +23,7 @@
 		8ACA83401D82644700151A77 /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA833F1D82644700151A77 /* RightViewController.swift */; };
 		8ACA83421D8273C000151A77 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA83411D8273C000151A77 /* DetailViewController.swift */; };
 		8ACA83441D82C6EB00151A77 /* LoaderClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA83431D82C6EB00151A77 /* LoaderClass.swift */; };
-		8AD8ED1F1D8A50E0005A360A /* SWRevealViewController in Resources */ = {isa = PBXBuildFile; fileRef = 8AD8ED1E1D8A50E0005A360A /* SWRevealViewController */; };
+		8AD8ED241D8A53CE005A360A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD8ED231D8A53CE005A360A /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,8 +66,9 @@
 		8ACA833F1D82644700151A77 /* RightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
 		8ACA83411D8273C000151A77 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8ACA83431D82C6EB00151A77 /* LoaderClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderClass.swift; sourceTree = "<group>"; };
-		8AD8ED1E1D8A50E0005A360A /* SWRevealViewController */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SWRevealViewController; sourceTree = "<group>"; };
 		8AD8ED201D8A512C005A360A /* HealthCareGuysApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HealthCareGuysApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		8AD8ED221D8A53CE005A360A /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		8AD8ED231D8A53CE005A360A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +119,8 @@
 		8ACA82FA1D8263B400151A77 /* HealthCareGuysApp */ = {
 			isa = PBXGroup;
 			children = (
+				8AD8ED211D8A53A6005A360A /* Supporting Files */,
 				8AD8ED201D8A512C005A360A /* HealthCareGuysApp-Bridging-Header.h */,
-				8AD8ED1E1D8A50E0005A360A /* SWRevealViewController */,
 				8ACA833F1D82644700151A77 /* RightViewController.swift */,
 				8ACA833D1D82643D00151A77 /* MenuCell.swift */,
 				8ACA833B1D82643500151A77 /* CustomCell.swift */,
@@ -155,6 +156,15 @@
 				8ACA83201D8263B400151A77 /* Info.plist */,
 			);
 			path = HealthCareGuysAppUITests;
+			sourceTree = "<group>";
+		};
+		8AD8ED211D8A53A6005A360A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AD8ED221D8A53CE005A360A /* SWRevealViewController.h */,
+				8AD8ED231D8A53CE005A360A /* SWRevealViewController.m */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +273,6 @@
 			files = (
 				8ACA832D1D8263E100151A77 /* Main.storyboard in Resources */,
 				8ACA832F1D8263F400151A77 /* Assets.xcassets in Resources */,
-				8AD8ED1F1D8A50E0005A360A /* SWRevealViewController in Resources */,
 				8ACA83091D8263B400151A77 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +309,7 @@
 				8ACA83311D82640000151A77 /* MenuViewController.swift in Sources */,
 				8ACA83401D82644700151A77 /* RightViewController.swift in Sources */,
 				8ACA833C1D82643500151A77 /* CustomCell.swift in Sources */,
+				8AD8ED241D8A53CE005A360A /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
