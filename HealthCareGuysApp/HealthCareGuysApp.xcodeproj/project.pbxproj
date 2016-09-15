@@ -17,13 +17,13 @@
 		8ACA832F1D8263F400151A77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ACA832E1D8263F400151A77 /* Assets.xcassets */; };
 		8ACA83311D82640000151A77 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA83301D82640000151A77 /* MenuViewController.swift */; };
 		8ACA83331D82640900151A77 /* MainCellItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA83321D82640900151A77 /* MainCellItems.swift */; };
-		8ACA83371D82641B00151A77 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA83351D82641B00151A77 /* SWRevealViewController.m */; };
 		8ACA833A1D82642D00151A77 /* ReloadExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA83391D82642D00151A77 /* ReloadExampleViewController.swift */; };
 		8ACA833C1D82643500151A77 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA833B1D82643500151A77 /* CustomCell.swift */; };
 		8ACA833E1D82643D00151A77 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA833D1D82643D00151A77 /* MenuCell.swift */; };
 		8ACA83401D82644700151A77 /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA833F1D82644700151A77 /* RightViewController.swift */; };
 		8ACA83421D8273C000151A77 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA83411D8273C000151A77 /* DetailViewController.swift */; };
 		8ACA83441D82C6EB00151A77 /* LoaderClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA83431D82C6EB00151A77 /* LoaderClass.swift */; };
+		8AD8ED1F1D8A50E0005A360A /* SWRevealViewController in Resources */ = {isa = PBXBuildFile; fileRef = 8AD8ED1E1D8A50E0005A360A /* SWRevealViewController */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,15 +60,14 @@
 		8ACA832E1D8263F400151A77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8ACA83301D82640000151A77 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8ACA83321D82640900151A77 /* MainCellItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCellItems.swift; sourceTree = "<group>"; };
-		8ACA83341D82641B00151A77 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		8ACA83351D82641B00151A77 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		8ACA83381D82642700151A77 /* MenuSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MenuSample-Bridging-Header.h"; sourceTree = "<group>"; };
 		8ACA83391D82642D00151A77 /* ReloadExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReloadExampleViewController.swift; sourceTree = "<group>"; };
 		8ACA833B1D82643500151A77 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		8ACA833D1D82643D00151A77 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		8ACA833F1D82644700151A77 /* RightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
 		8ACA83411D8273C000151A77 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8ACA83431D82C6EB00151A77 /* LoaderClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderClass.swift; sourceTree = "<group>"; };
+		8AD8ED1E1D8A50E0005A360A /* SWRevealViewController */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SWRevealViewController; sourceTree = "<group>"; };
+		8AD8ED201D8A512C005A360A /* HealthCareGuysApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HealthCareGuysApp-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,12 +118,12 @@
 		8ACA82FA1D8263B400151A77 /* HealthCareGuysApp */ = {
 			isa = PBXGroup;
 			children = (
+				8AD8ED201D8A512C005A360A /* HealthCareGuysApp-Bridging-Header.h */,
+				8AD8ED1E1D8A50E0005A360A /* SWRevealViewController */,
 				8ACA833F1D82644700151A77 /* RightViewController.swift */,
 				8ACA833D1D82643D00151A77 /* MenuCell.swift */,
 				8ACA833B1D82643500151A77 /* CustomCell.swift */,
 				8ACA83391D82642D00151A77 /* ReloadExampleViewController.swift */,
-				8ACA83381D82642700151A77 /* MenuSample-Bridging-Header.h */,
-				8ACA83361D82641B00151A77 /* SWRevealViewController */,
 				8ACA83321D82640900151A77 /* MainCellItems.swift */,
 				8ACA83301D82640000151A77 /* MenuViewController.swift */,
 				8ACA832E1D8263F400151A77 /* Assets.xcassets */,
@@ -156,16 +155,6 @@
 				8ACA83201D8263B400151A77 /* Info.plist */,
 			);
 			path = HealthCareGuysAppUITests;
-			sourceTree = "<group>";
-		};
-		8ACA83361D82641B00151A77 /* SWRevealViewController */ = {
-			isa = PBXGroup;
-			children = (
-				8ACA83341D82641B00151A77 /* SWRevealViewController.h */,
-				8ACA83351D82641B00151A77 /* SWRevealViewController.m */,
-			);
-			name = SWRevealViewController;
-			path = ../../HealthCareGuys/MenuSample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +263,7 @@
 			files = (
 				8ACA832D1D8263E100151A77 /* Main.storyboard in Resources */,
 				8ACA832F1D8263F400151A77 /* Assets.xcassets in Resources */,
+				8AD8ED1F1D8A50E0005A360A /* SWRevealViewController in Resources */,
 				8ACA83091D8263B400151A77 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +300,6 @@
 				8ACA83311D82640000151A77 /* MenuViewController.swift in Sources */,
 				8ACA83401D82644700151A77 /* RightViewController.swift in Sources */,
 				8ACA833C1D82643500151A77 /* CustomCell.swift in Sources */,
-				8ACA83371D82641B00151A77 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,11 +435,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = HealthCareGuysApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.citrusInformatics.HealthCareGuysApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "HealthCareGuysApp/MenuSample-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "HealthCareGuysApp/HealthCareGuysApp-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -458,11 +449,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = HealthCareGuysApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.citrusInformatics.HealthCareGuysApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "HealthCareGuysApp/MenuSample-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "HealthCareGuysApp/HealthCareGuysApp-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -531,6 +524,7 @@
 				8ACA83251D8263B400151A77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8ACA83261D8263B400151A77 /* Build configuration list for PBXNativeTarget "HealthCareGuysAppTests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +533,7 @@
 				8ACA83281D8263B400151A77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8ACA83291D8263B400151A77 /* Build configuration list for PBXNativeTarget "HealthCareGuysAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +542,7 @@
 				8ACA832B1D8263B400151A77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
