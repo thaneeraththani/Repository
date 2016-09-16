@@ -27,6 +27,7 @@ class DetailViewController: UIViewController,UINavigationControllerDelegate {
 
        favouriteButton.layer.cornerRadius = self.favouriteButton.frame.size.width / 4
         favouriteButton.clipsToBounds = true
+        
 
     }
 

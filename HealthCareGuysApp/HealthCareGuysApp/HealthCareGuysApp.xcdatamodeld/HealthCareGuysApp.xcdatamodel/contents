@@ -6,14 +6,14 @@
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="newsDetail" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="News" syncable="YES">
-        <attribute name="commentedTime" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="News" representedClassName=".HeadLines" syncable="YES">
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="headLine" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="newsDetails" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="News" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="Contribution" positionX="-54" positionY="18" width="128" height="105"/>
+        <element name="News" positionX="-63" positionY="-18" width="128" height="105"/>
     </elements>
 </model>

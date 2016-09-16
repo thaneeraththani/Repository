@@ -10,11 +10,12 @@ import UIKit
 
 class CustomCell: UITableViewCell {
 
+  
+    @IBOutlet weak var newsImage: UIImageView!
     
-  var heading: UILabel = UILabel()
-    
-   var details: UILabel = UILabel()
-    var share: UIButton = UIButton()
-    
+    @IBOutlet weak var headLine: UILabel!
 
+    @IBOutlet weak var commentedTime: UILabel!
+    @IBOutlet weak var category: UILabel!
+    @IBOutlet weak var vote: UIButton!
 }

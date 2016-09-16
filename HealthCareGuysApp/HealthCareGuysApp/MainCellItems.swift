@@ -17,8 +17,7 @@ class MainCellItems: UITableViewCell {
 
     @IBOutlet weak var commentedTime: UILabel!
 
-    @IBOutlet weak var exit: UIButton!
-    @IBOutlet weak var bookmark: UIButton!
+    @IBOutlet weak var category: UILabel!
+      @IBOutlet weak var bookmark: UIButton!
     @IBOutlet weak var share: UIButton!
-    @IBOutlet weak var separatorBar: UIView!
-}
+    }

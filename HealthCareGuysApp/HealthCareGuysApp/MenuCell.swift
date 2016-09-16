@@ -9,6 +9,12 @@
 import UIKit
 
 class MenuCell: UITableViewCell {
-    @IBOutlet weak var cellItem: UILabel!
+  
 
+    @IBOutlet weak var newsImage: UIImageView!
+    @IBOutlet weak var headLine: UILabel!
+    @IBOutlet weak var commentTime: UILabel!
+    @IBOutlet weak var category: UILabel!
+    @IBOutlet weak var vote: UIButton!
+    
 }
