@@ -9,11 +9,32 @@
 import Foundation
 import CoreData
 class HeadLines : NSManagedObject {
-    var headline: NSString = NSString()
-    var newsDetails : NSString = NSString()
-    var comment: NSString = NSString()
-    var commentedDate: NSString = NSString()
-    var id:Int = Int()
+    //var headline: NSString = NSString()
+   // var newsDetails : NSString = NSString()
+   // var comment: NSString = NSString()
+   // var commentedDate: NSString = NSString()
+  //  var id:Int = Int()
+    var headline = NSString()
+     
+    var newsDetail = NSString()
+
+       
+
+    var commentTime =  NSString()
+    
+    
+    var category =  NSString()
+    
+    
+    var imageUrl = NSString()
+    
+    var id = NSInteger()
+   
+    override init(entity: NSEntityDescription, insertIntoManagedObjectContext context: NSManagedObjectContext?) {
+        super.init(entity: entity, insertIntoManagedObjectContext: context)
+    }
+    
+
 
     
 }
@@ -27,12 +48,14 @@ class LoaderClass:ViewController,NSURLSessionDelegate {
     var headLine = NSMutableArray()
     var commentTime = NSMutableArray()
     var category = NSMutableArray()
-    var dictionary :Dictionary<String,String> = [:]
+    var dictionary = NSMutableDictionary()
     var firstData = NSMutableArray()
-    
+    var content = NSMutableArray()
+    var userDefaults = NSUserDefaults()
+    var newsDetails = NSMutableArray()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        userDefaults = NSUserDefaults.standardUserDefaults()
         
     }
     
@@ -114,9 +137,8 @@ class LoaderClass:ViewController,NSURLSessionDelegate {
                 
                 do {
                     let json = try NSJSONSerialization.JSONObjectWithData(dataR, options: []) as! [String: AnyObject]
-                    self.parse(json)
-                    print("HeadLines structure data\(self.headLine)")
-                    self.saveName()
+                   self.parse(json)
+                self.saveName()
                 } catch let error as NSError {
                     print("Failed to load: \(error.localizedDescription)")
                 }
@@ -130,7 +152,7 @@ class LoaderClass:ViewController,NSURLSessionDelegate {
     }
     
     
-    func parse(anyObj:AnyObject) {
+    func parse(anyObj:AnyObject) -> Array<HeadLines> {
         var list:Array<HeadLines> = []
       //  print("full content iss\(anyObj["content"])")
         if  anyObj["content"] is Array<AnyObject> {
@@ -144,17 +166,30 @@ class LoaderClass:ViewController,NSURLSessionDelegate {
             for json in anyObj["content"] as! [[String:AnyObject]] {
               
                 b.id = (json["id"] as AnyObject? as? Int) ?? 0
-                b.comment = (json["updated"] as AnyObject? as? String) ?? ""
+               
                 b.headline = (json["title"] as AnyObject? as? String) ?? ""
-                b.newsDetails  =  (json["content"]  as AnyObject? as? String) ?? ""
+                b.newsDetail  =  (json["content"]  as AnyObject? as? String) ?? ""
+                b.commentTime  =  (json["tags"]![0]  as AnyObject? as? String) ?? ""
+                list.append(b)
                 id.addObject(b.id)
                headLine.addObject(b.headline)
-                commentTime.addObject(b.comment)
-                 // print("VALUES: \(headLine)")
+                commentTime.addObject(b.commentTime)
+                newsDetails.addObject(b.newsDetail)
+            
             }// for
             
         } // if
+       
+        userDefaults.setObject(headLine, forKey:"headlineArray")
+        userDefaults.setObject(id, forKey:"idArray")
+        userDefaults.setObject(newsDetails, forKey: "newsContent")
+         userDefaults.setObject(commentTime, forKey: "category")
+        userDefaults.synchronize()
+      var newArr = userDefaults.objectForKey("category") as! NSMutableArray
         
+       print("array\(newArr)")
+        
+     return list
        
     }
     
@@ -170,65 +205,95 @@ class LoaderClass:ViewController,NSURLSessionDelegate {
         let entity =  NSEntityDescription.entityForName("News",
                                                         inManagedObjectContext:managedContext)
         
-        let news = NSManagedObject(entity: entity!,
-                                   insertIntoManagedObjectContext: managedContext)
+        
         let countOf = id.count
         print("count iss \(countOf)")
         for i in 0...countOf - 1 {
+            
+            let news = NSManagedObject(entity: entity!,
+                                       insertIntoManagedObjectContext: managedContext)
                        //3
+            print("i value\(i)")
+            //print("object at index\(newsDetails.objectAtIndex(i))")
             news.setValue(headLine.objectAtIndex(i), forKey: "headLine")
             
 
-          // news.setValue(list.newsDetails, forKey: "newsDetails")
-            news.setValue(commentTime, forKey: "comment")
+           news.setValue(newsDetails.objectAtIndex(i), forKey: "newsDetails")
+            news.setValue(commentTime.objectAtIndex(i), forKey: "commentTime")
             
 
             // news.setValue(list.commentedDate, forKey: "commentedTime")
             news.setValue(id.objectAtIndex(i), forKey: "id")
+            //print("news data\(news)")
                            //4
             do {
                 try managedContext.save()
                 //5
-                newsToSave.append(news as NSManagedObject)
-                //print("helloo\(newsToSave)")
+                self.newsToSave.insert(news, atIndex: i)
+                print("helloo -----\(i)")
+                
                 } catch let error as NSError  {
                 print("Could not save \(error), \(error.userInfo)")
             }
+            
         }
+              //  print("helloo\(self.newsToSave)")
+       // getData()
+        
     }
     
     
-    func getData() -> Dictionary<String,String>{
+    func getData() -> NSMutableArray{
         
         let appDelegate =
             UIApplication.sharedApplication().delegate as! AppDelegate
         
         let managedContext = appDelegate.managedObjectContext
 
-        let request = NSFetchRequest(entityName: "News")
-        do{
-            let entities = try managedContext.executeFetchRequest(request) as! [HeadLines]
-           // print("entities array\(entities)")
+        let fetchRequest = NSFetchRequest()
+        
+        // Create Entity Description
+        
+        
+        let entityDescription = NSEntityDescription.entityForName("News", inManagedObjectContext: managedContext)
+        fetchRequest.entity = entityDescription
+        do {
+            let result = try managedContext.executeFetchRequest(fetchRequest) as! [HeadLines]
+            for item in result{
+               // dictionary.setValue("id", forKey: item.id as NSString as String as String)
+                dictionary.setValue("headLine", forKey: item.headline as String)
+                dictionary.setValue("commentTime", forKey: item.commentTime as String)
+                dictionary.setValue("newsDetails", forKey: item.newsDetail as String)
+            }
+          //  print("reult is real\(result)")
+            
+        } catch {
+            let fetchError = error as NSError
+            print(fetchError)
+        }
+     /*   print("entities array\(entities)")
             for item in entities{
                 for key in item.entity.attributesByName.keys{
                     let value: AnyObject? = item.valueForKey(key)
-                    print("\(key) = \(value)")
-                    if key != "id"{
-                        
-                     
-                    }
+                    print("keys\(key) = \(value)")
+                    dictionary.setValue(value,forKey :key)
+                   
                 }
                //  print("list items\(list)")
                 
             }
             
-             print("list items outside\(dictionary)")
+         
             
       
         } catch {
             let fetchError = error as NSError
             print(fetchError)
-        }
-        return dictionary
+        }*/
+      //  headLine = userDefaults.objectForKey("headlineArray") as! NSMutableArray
+        
+         print("list items outside\(self.headLine)")
+        return self.headLine
     }
-}
+    
+    }

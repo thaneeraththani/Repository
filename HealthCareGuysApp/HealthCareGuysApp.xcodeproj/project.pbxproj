@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8A86D9851D8BAA5900321F15 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A86D9841D8BAA5900321F15 /* NewsViewController.swift */; };
-		8A86D9871D8BAA6F00321F15 /* AllNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A86D9861D8BAA6F00321F15 /* AllNewsViewController.swift */; };
 		8A86D9891D8BAA8000321F15 /* ContributionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A86D9881D8BAA8000321F15 /* ContributionViewController.swift */; };
 		8A86D98B1D8BD4F700321F15 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A86D98A1D8BD4F700321F15 /* TabBarController.swift */; };
 		8A86D98D1D8C149C00321F15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A86D98C1D8C149C00321F15 /* Main.storyboard */; };
@@ -27,6 +26,7 @@
 		8ACA83401D82644700151A77 /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA833F1D82644700151A77 /* RightViewController.swift */; };
 		8ACA83421D8273C000151A77 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA83411D8273C000151A77 /* DetailViewController.swift */; };
 		8ACA83441D82C6EB00151A77 /* LoaderClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA83431D82C6EB00151A77 /* LoaderClass.swift */; };
+		8AD383461D8D0E3E00616BE8 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD383451D8D0E3E00616BE8 /* File.swift */; };
 		8AD8ED241D8A53CE005A360A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD8ED231D8A53CE005A360A /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +49,6 @@
 
 /* Begin PBXFileReference section */
 		8A86D9841D8BAA5900321F15 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
-		8A86D9861D8BAA6F00321F15 /* AllNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllNewsViewController.swift; sourceTree = "<group>"; };
 		8A86D9881D8BAA8000321F15 /* ContributionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributionViewController.swift; sourceTree = "<group>"; };
 		8A86D98A1D8BD4F700321F15 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		8A86D98C1D8C149C00321F15 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 		8ACA833F1D82644700151A77 /* RightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
 		8ACA83411D8273C000151A77 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8ACA83431D82C6EB00151A77 /* LoaderClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderClass.swift; sourceTree = "<group>"; };
+		8AD383451D8D0E3E00616BE8 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		8AD8ED201D8A512C005A360A /* HealthCareGuysApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HealthCareGuysApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		8AD8ED221D8A53CE005A360A /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		8AD8ED231D8A53CE005A360A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -145,9 +145,9 @@
 				8ACA83411D8273C000151A77 /* DetailViewController.swift */,
 				8ACA83431D82C6EB00151A77 /* LoaderClass.swift */,
 				8A86D9841D8BAA5900321F15 /* NewsViewController.swift */,
-				8A86D9861D8BAA6F00321F15 /* AllNewsViewController.swift */,
 				8A86D9881D8BAA8000321F15 /* ContributionViewController.swift */,
 				8A86D98A1D8BD4F700321F15 /* TabBarController.swift */,
+				8AD383451D8D0E3E00616BE8 /* File.swift */,
 			);
 			path = HealthCareGuysApp;
 			sourceTree = "<group>";
@@ -315,6 +315,7 @@
 				8ACA82FE1D8263B400151A77 /* ViewController.swift in Sources */,
 				8A86D9891D8BAA8000321F15 /* ContributionViewController.swift in Sources */,
 				8ACA83041D8263B400151A77 /* HealthCareGuysApp.xcdatamodeld in Sources */,
+				8AD383461D8D0E3E00616BE8 /* File.swift in Sources */,
 				8ACA833E1D82643D00151A77 /* MenuCell.swift in Sources */,
 				8ACA833A1D82642D00151A77 /* ReloadExampleViewController.swift in Sources */,
 				8ACA83441D82C6EB00151A77 /* LoaderClass.swift in Sources */,
@@ -325,7 +326,6 @@
 				8ACA83401D82644700151A77 /* RightViewController.swift in Sources */,
 				8ACA833C1D82643500151A77 /* CustomCell.swift in Sources */,
 				8AD8ED241D8A53CE005A360A /* SWRevealViewController.m in Sources */,
-				8A86D9871D8BAA6F00321F15 /* AllNewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

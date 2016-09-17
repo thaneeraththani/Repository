@@ -20,4 +20,8 @@ class MainCellItems: UITableViewCell {
     @IBOutlet weak var category: UILabel!
       @IBOutlet weak var bookmark: UIButton!
     @IBOutlet weak var share: UIButton!
+    func setCells()  {
+      
+
+    }
     }

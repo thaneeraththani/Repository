@@ -7,13 +7,15 @@
         <attribute name="newsDetail" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="News" representedClassName=".HeadLines" syncable="YES">
-        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="commentTime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="headLine" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="newsDetails" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="Contribution" positionX="-54" positionY="18" width="128" height="105"/>
-        <element name="News" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="News" positionX="-63" positionY="-18" width="128" height="135"/>
     </elements>
 </model>

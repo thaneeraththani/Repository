@@ -7,49 +7,37 @@
 //
 
 import UIKit
-
+import CoreData
 class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-    @IBOutlet weak var menu: UIButton!
-    var list : Dictionary<String,String> = [ : ]
-    var headLine = NSMutableArray()
-    var category = NSMutableArray()
-    var commentTime = NSMutableArray()
+    var list = NSMutableArray()
     
+    var conteDetails = NSMutableArray()
+    var category = NSMutableArray()
+    var urlArray : [String] = []
+    var content: [String] = []
+    var userDefaults = NSUserDefaults()
     var obLoaderClass = LoaderClass()
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        //  list = obLoaderClass.getData()
-        for (key, value) in list {
-            print("\(key) -> \(value)")
-            
-            switch(key){
-            case "headLine":
-                headLine.addObject(value)
-                print(headLine)
-                break
-            case "id" :
-                break
-            case "comment" :
-                break
-            default : print("default")
-                break
-                
-            }
-        }
+        obLoaderClass.login_request()
+        print("hii welcome")
+        obLoaderClass.getHeadlines_request()
+        //list = obLoaderClass.getData()
+        userDefaults = NSUserDefaults.standardUserDefaults()
         
         
-        
-        //self.tableView.contentInset = UIEdgeInsetsMake(0, 5, 0, 0)
-        
-        
+        list = userDefaults.objectForKey("headlineArray") as! NSMutableArray
+        conteDetails = userDefaults.objectForKey("newsContent") as! NSMutableArray
+        category = userDefaults.objectForKey("category") as! NSMutableArray
+     print("real data\(conteDetails)")
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 10
+        return list.count
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,16 +51,72 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         cell.layer.cornerRadius = 2
         
         cell.clipsToBounds = true
-        // self.performSegueWithIdentifier("goback", sender: indexPath)
-        //print("headline array\(headLine)")
-        // cell.headLine.text = headLine.objectAtIndex(indexPath.row) as! String
-        //cell.category.text = category.objectAtIndex(indexPath.section) as! intptr_t
+        cell.headLine.text = list.objectAtIndex(indexPath.section) as? String
+         //print("count is \(conteDetails.count)")
+        var split = conteDetails.objectAtIndex(indexPath.section) as? String
+       // print("splitt\(conteDetails.objectAtIndex(indexPath.section))")
+      //  var actualContent = split?.componentsSeparatedByString("<p>")
+       // var real = actualContent?.last!.componentsSeparatedByString("</p>")
+       // content[indexPath.section] = (actualContent?.last)!
+        if indexPath.section == 0{
+            var ob :MainCellItems = MainCellItems()
+            ob.setCells()
+            
+        }
+
+        if split!.lowercaseString.rangeOfString("<img src") != nil{
+            var arraySplit = split?.componentsSeparatedByString("<img src=\"")
+            var address = arraySplit!.last!.componentsSeparatedByString("\">")
+            // print("this is\(address[0])")
+            var addressString = address[0]
+            
+            var url = addressString
+            //urlArray[indexPath.section] = url
+                       //  print("this one\(url)")
+            // print("indexPath \(indexPath.section)")
+            var imgURL: NSURL = NSURL(string : addressString)!
+            let request: NSURLRequest = NSURLRequest(URL: imgURL)
+            NSURLConnection.sendAsynchronousRequest(
+                request, queue: NSOperationQueue.mainQueue(),
+                completionHandler: {(response: NSURLResponse?,data: NSData?,error: NSError?) -> Void in
+                    if error == nil {
+                        cell.newsImage.image = UIImage(data: data!)
+                    }
+            })
+        }
+        else{
+            cell.newsImage.image = UIImage(named: "placeholder")
+           // urlArray[indexPath.section] = ""
+        }
+        if split!.lowercaseString.rangeOfString("source") != nil{
+            var arraySplit = split?.componentsSeparatedByString("source:")
+            var address = arraySplit!.last!.componentsSeparatedByString("|\n")
+            
+            cell.commentedTime.text = address.first
+        }
+        else{
+            cell.commentedTime.text = ""
+        }
+        
+        
+        
+        cell.category.text = category.objectAtIndex(indexPath.section) as! String
+        
+        userDefaults.setObject(content, forKey:"contentOnly")
+        userDefaults.setObject(urlArray, forKey:"urlArray")
+        userDefaults.synchronize()
         return cell
         
     }
-    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 120
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.section == 0{
+            return 120
+        }
+        else{
+            return 120
+        }
     }
+  
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 5
@@ -87,7 +131,7 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("You selected cell #\(indexPath.row)!")
-        //self.performSegueWithIdentifier("detailView", sender: indexPath)
+       // self.performSegueWithIdentifier("goToView", sender: indexPath)
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -98,7 +142,6 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         footerView.backgroundColor = UIColor.clearColor()
         return footerView
     }
-    
-}
+  }
 
 

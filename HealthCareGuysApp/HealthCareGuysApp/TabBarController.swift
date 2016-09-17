@@ -13,15 +13,14 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // obLoaderClass.login_request()
-      //  obLoaderClass.getHeadlines_request()
-
+      
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.tabBar.barTintColor = UIColor.blackColor()
-        self.tabBar.tintColor = UIColor.whiteColor()
+        self.tabBar.barTintColor = UIColor.whiteColor()
+        self.tabBar.tintColor = UIColor().HexToColor("#00D7D7", alpha: 1.0)
+      
     }
 
 }
